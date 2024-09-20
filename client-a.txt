@@ -1,6 +1,8 @@
-# Client Task A # # Add your pseudocode to this file below this line: # # 
-------------------------------------------------- # BEGIN 
-GuessTheNumberGame
+# Client Task A # 
+# Add your pseudocode to this file below this line: # 
+# ------------------------------------------------- # 
+
+BEGIN GuessTheNumberGame
     ##Step 1: Initialize the game##
  
 	SET randomNumber TO RANDOM(1, 10)
@@ -37,4 +39,5 @@ GuessTheNumberGame
 ##Step 4: Check if player has run out of attempts##
  	IF attempts = 0 THEN
  	OUTPUT "Sorry, you've run out of attempts. The correct number was: " + randomNumber 
+
 END GuessTheNumberGame
