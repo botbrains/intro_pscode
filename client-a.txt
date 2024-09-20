@@ -1,4 +1,40 @@
-# Client Task A #
-# Add your pseudocode to this file below this line: #
-# ------------------------------------------------- #
+# Client Task A # # Add your pseudocode to this file below this line: # # 
+------------------------------------------------- # BEGIN 
+GuessTheNumberGame
+    ##Step 1: Initialize the game##
+ 
+	SET randomNumber TO RANDOM(1, 10)
+ 
+##Computer chooses a random number between 1 and 10##
+   
+	SET attempts TO 3
+##player has 3 attempts##
+    
+	SET guess TO 0 
 
+##init player's guess##
+
+##Step 2: Start the guessing loop##
+    WHILE attempts > 0 DO
+        OUTPUT "You have " + attempts + " attempts left. Guess a number between 1 and 10:"
+        INPUT guess 
+## Get player's guess##
+ 
+##Step 3: Check the player's guess##
+        IF guess < 1 OR guess > 10 THEN
+            OUTPUT "Please guess a number 1 to 10." 
+	CONTINUE 
+##Skip to the next iteration of the loop##
+        IF guess = randomNumber THEN
+        OUTPUT "Congratulations! You've guessed the right number: " + randomNumber
+            BREAK 
+##Exit the loop since the player has won##
+        ELSE OUTPUT "Wrong guess!"
+        DECREMENT attempts BY 1 
+##Reduce the number of attempts left##
+
+    END WHILE
+##Step 4: Check if player has run out of attempts##
+ 	IF attempts = 0 THEN
+ 	OUTPUT "Sorry, you've run out of attempts. The correct number was: " + randomNumber 
+END GuessTheNumberGame

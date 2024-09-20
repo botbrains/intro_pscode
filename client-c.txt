@@ -1,4 +1,21 @@
 # Client Task C #
-# Add your pseudocode to this file below this line: #
-# ------------------------------------------------- #
+# Add your pseudocode to this file below this line:#
+# ------------------------------------------------- # 
 
+BEGIN ProductPackageCounter
+    
+// Step 1: Initialize the starting value 
+
+SET packageCount TO 2 
+// Start from 2 
+
+// Step 2: Loop to count by twos until 50 
+WHILE 
+    packageCount <= 50 DO
+        OUTPUT packageCount 
+// Print the current count INCREMENT 
+        packageCount BY 2 
+// Increase the count by 2
+    
+END WHILE
+END ProductPackageCounter

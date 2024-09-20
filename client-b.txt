@@ -1,4 +1,48 @@
-# Client Task B #
-# Add your pseudocode to this file below this line: #
-# ------------------------------------------------- #
+# Client Task B # # Add your pseudocode to this file below this line: # # 
+------------------------------------------------- # BEGIN 
+WarehouseMappingApp
 
+    // Step 1: Define the warehouse grid 
+
+SET warehouseGrid TO 2D_ARRAY 
+//  Create a 2D array representing the warehouse 
+
+SET targetLocation TO (x,y) 
+// Coordinates of the target location 
+
+SET currentLocation TO (startX, startY) 
+// Starting position of the customer 
+
+// Step 2:  Display directions to the customer 
+OUTPUT "You can move: North (N), South (S), East (E), West (W)." 
+
+// Step 3: Loop until the customer reaches the target location 
+WHILE currentLocation != targetLocation DO
+        OUTPUT "Current Location: " + currentLocation 
+	OUTPUT "Enter your move (N, S, E, W):" 
+	INPUT move 
+// Get the customer's move 
+// Step 4: Update the current location based on the move 
+	IF move = "N" 
+        THEN
+            SET currentLocation.y TO currentLocation.y + 1 
+// Move north
+        ELSE IF move = "S" THEN
+            SET currentLocation.y TO currentLocation.y - 1 
+// Move south
+        ELSE IF move = "E" THEN
+            SET currentLocation.x TO currentLocation.x + 1 
+// Move east
+        ELSE IF move = "W" THEN
+            SET currentLocation.x TO currentLocation.x - 1 
+// Move west
+        ELSE
+            OUTPUT "Invalid move. Please enter N, S, E, or W."
+	 CONTINUE 
+// Skip to the next iteration
+// Step 5: Check if the current location is the target location 
+IF 
+        currentLocation == targetLocation THEN
+            OUTPUT "You have reached your destination!"
+    END WHILE 
+END WarehouseMappingApp
